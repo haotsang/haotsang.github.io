@@ -1,5 +1,5 @@
 config = {
-    blog_name: "haotsang的博客",
+    blog_name: "HaoTsang's Blog",
     github_username: "haotsang", // github 账号名
     github_repo: "haotsang.github.io",      // github 建立的 repo 名
     per_page: 10,             // 首页每次载入文章列表数量
