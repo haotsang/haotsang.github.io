@@ -12,7 +12,7 @@ createHTTPRequestObject = function() {
     return null;
 }
 
-getJSON = function(url, success, error)
+getJSON = function(url, callback)
 {
     var xhr = createHTTPRequestObject();
     xhr.open("get", url, true);
@@ -31,10 +31,7 @@ getJSON = function(url, success, error)
                     }
                 }
             }
-            success(JSON.parse(xhr.responseText), headers);
-        }
-        if (xhr.status != 200) {
-            if (error) error();
+            callback(JSON.parse(xhr.responseText), headers);
         }
     }
     xhr.send();
